@@ -1,159 +1,236 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lemon X App - Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for Screw Jammed mobile game by Lemon X App">
+  
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* 基础样式重置 */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background-color: #fdfdfd;
-      color: #333;
+      padding: 0;
     }
+    
+    body {
+      font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 响应式布局 */
     header {
-      background-color: #ffcf40;
-      padding: 20px;
+      background: linear-gradient(135deg, #ffcf40 0%, #ffa62b 100%);
+      padding: clamp(15px, 3vw, 25px);
       text-align: center;
       color: #2c3e50;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #f8f8f8;
-      border-bottom: 1px solid #ddd;
-    }
-    nav a {
-      padding: 14px 20px;
-      display: inline-block;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      background-color: #eee;
-    }
+
     .content {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: clamp(20px, 5vw, 40px) clamp(15px, 4vw, 30px);
+      max-width: min(900px, 90%);
       margin: 0 auto;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    a {
-      color: #0077cc;
-    }
-    .section {
-      display: none;
-    }
-    .section.active {
-      display: block;
-    }
-    .banner-img {
-      width: 100%;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
       border-radius: 12px;
-      margin: 20px 0;
+      flex: 1;
+      margin-top: -20px;
+      position: relative;
+      z-index: 1;
     }
+
+    /* 文字排版增强 */
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 1.8rem);
+      color: #2c3e50;
+      margin: 1.5em 0 0.8em;
+      padding-bottom: 0.3em;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    h3 {
+      font-size: clamp(1.2rem, 3vw, 1.4rem);
+      color: #3498db;
+      margin: 1.2em 0 0.6em;
+    }
+
+    p, li {
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+      margin-bottom: 1em;
+    }
+
+    /* 链接样式 */
+    a {
+      color: #2980b9;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #e74c3c;
+      text-decoration: underline;
+    }
+
+    /* 列表优化 */
+    ul {
+      padding-left: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    li {
+      margin-bottom: 0.8em;
+      position: relative;
+      padding-left: 1em;
+    }
+
+    li:before {
+      content: "•";
+      color: #ffa62b;
+      position: absolute;
+      left: 0;
+    }
+
+    /* 页脚样式 */
     footer {
       text-align: center;
-      padding: 20px;
-      background: #f2f2f2;
-      color: #777;
-      margin-top: 40px;
+      padding: 1.5em;
+      background: #2c3e50;
+      color: #ecf0f1;
+      margin-top: 3em;
+      font-size: 0.9rem;
+    }
+
+    /* 外部链接图标 */
+    a[target="_blank"]:after {
+      content: " ↗";
+      font-size: 0.8em;
+    }
+
+    /* 打印优化 */
+    @media print {
+      body {
+        background: none;
+        font-size: 12pt;
+      }
+      .content {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      header {
+        background: none;
+        color: #000;
+      }
+    }
+
+    /* 超大屏幕适配 */
+    @media (min-width: 1600px) {
+      .content {
+        max-width: 1000px;
+      }
+    }
+
+    /* 平板横屏适配 */
+    @media (max-width: 1024px) and (orientation: landscape) {
+      .content {
+        padding: 30px;
+      }
+    }
+
+    /* 手机竖屏优化 */
+    @media (max-width: 768px) {
+      .content {
+        border-radius: 0;
+        margin-top: 0;
+        max-width: 100%;
+      }
+      ul {
+        padding-left: 1.2em;
+      }
+    }
+
+    /* 小手机优化 */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      li {
+        padding-left: 0.8em;
+      }
     }
   </style>
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-    window.onload = () => showSection('home');
-  </script>
 </head>
 <body>
   <header>
     <h1>Lemon X App</h1>
-    <p>Fun, Casual, and Creative Mobile Games</p>
+    <p>Privacy Policy for Screw Jammed</p>
   </header>
-  <nav>
-    <a href="#" onclick="showSection('home')">Home</a>
-    <a href="#" onclick="showSection('privacy')">Privacy Policy</a>
-  </nav>
 
   <div class="content">
-    <div id="home" class="section">
-      <h2>Welcome to Lemon X App</h2>
-      <img src="https://images.unsplash.com/photo-1581091012184-7b81a4894c8c" alt="Casual Gaming" class="banner-img">
-      <p>
-        At <strong>Lemon X App</strong>, we're dedicated to creating lighthearted and delightful casual mobile games. Whether you're taking a break or just looking to smile, our titles are designed to relax and entertain. Our team of passionate developers, designers, and artists work hard to make your free time more joyful.
-      </p>
-      <p>
-        Our games feature:
-        <ul>
-          <li>Simple but engaging gameplay</li>
-          <li>Charming visuals and relaxing music</li>
-          <li>Accessible mechanics for all ages</li>
-        </ul>
-      </p>
-      <p>
-        We believe gaming should be a positive and fun experience. Our flagship title <strong>Screw Jammed</strong> is just the beginning — stay tuned for more unique and joyful creations from us!
-      </p>
-    </div>
+    <p><strong>Last updated:</strong> July 7, 2025</p>
 
-    <div id="privacy" class="section">
-      <h2>Privacy Policy for Screw Jammed</h2>
-      <p><strong>Last updated:</strong> July 7, 2025</p>
+    <h3>1. Introduction</h3>
+    <p>We at Screw Jammed take your privacy seriously. This privacy policy explains what data we collect, why we collect it, and how we use and protect it.</p>
 
-      <h3>1. Introduction</h3>
-      <p>We at Screw Jammed take your privacy seriously. This privacy policy explains what data we collect, why we collect it, and how we use and protect it.</p>
+    <h3>2. Information We Collect</h3>
+    <ul>
+      <li><strong>Device Information:</strong> Device model, operating system version, unique identifiers (such as IDFA or GAID).</li>
+      <li><strong>Location:</strong> Approximate location based on IP for regional services and ad targeting.</li>
+      <li><strong>Language Settings:</strong> To support localized experiences.</li>
+      <li><strong>Behavioral Data:</strong> In-game interactions, ad views, gameplay events.</li>
+    </ul>
 
-      <h3>2. Information We Collect</h3>
-      <ul>
-        <li><strong>Device Information:</strong> Device model, operating system version, unique identifiers (such as IDFA or GAID).</li>
-        <li><strong>Location:</strong> Approximate location based on IP for regional services and ad targeting.</li>
-        <li><strong>Language Settings:</strong> To support localized experiences.</li>
-        <li><strong>Behavioral Data:</strong> In-game interactions, ad views, gameplay events.</li>
-      </ul>
+    <h3>3. Third-Party SDKs and Services</h3>
+    <p>We integrate with the following third-party services for advertising and analytics:</p>
+    <ul>
+      <li><strong>LevelPlay by IronSource:</strong> <a href="https://www.is.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+      <li><strong>Unity Ads:</strong> <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></li>
+      <li><strong>Google AdMob:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+      <li><strong>Firebase:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+    </ul>
 
-      <h3>3. Third-Party SDKs and Services</h3>
-      <p>We integrate with the following third-party services for advertising and analytics:</p>
-      <ul>
-        <li><strong>LevelPlay by IronSource:</strong> <a href="https://www.is.com/privacy-policy/" target="_blank">Privacy Policy</a></li>
-        <li><strong>Unity Ads:</strong> <a href="https://unity.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
-        <li><strong>Google AdMob:</strong> <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
-        <li><strong>Firebase:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
-      </ul>
+    <h3>4. How We Use Your Information</h3>
+    <ul>
+      <li>To provide and improve gameplay features.</li>
+      <li>To serve relevant ads based on user behavior and location.</li>
+      <li>To analyze performance and diagnose issues.</li>
+      <li>To comply with applicable laws and regulations.</li>
+    </ul>
 
-      <h3>4. How We Use Your Information</h3>
-      <ul>
-        <li>To provide and improve gameplay features.</li>
-        <li>To serve relevant ads based on user behavior and location.</li>
-        <li>To analyze performance and diagnose issues.</li>
-        <li>To comply with applicable laws and regulations.</li>
-      </ul>
+    <h3>5. Data Storage & Security</h3>
+    <p>We take reasonable technical and organizational measures to protect your data. Data is retained only as long as necessary for the purposes outlined in this policy.</p>
 
-      <h3>5. Data Storage & Security</h3>
-      <p>We take reasonable technical and organizational measures to protect your data. Data is retained only as long as necessary for the purposes outlined in this policy.</p>
+    <h3>6. Your Rights</h3>
+    <ul>
+      <li>Access, modify, or delete your personal data.</li>
+      <li>Opt out of personalized advertising.</li>
+      <li>Contact us with any privacy concerns.</li>
+    </ul>
 
-      <h3>6. Your Rights</h3>
-      <ul>
-        <li>Access, modify, or delete your personal data.</li>
-        <li>Opt out of personalized advertising.</li>
-        <li>Contact us with any privacy concerns.</li>
-      </ul>
+    <h3>7. Children's Privacy</h3>
+    <p>Our game is not intended for children under 13. If we become aware of having collected data from a child without parental consent, we will delete it.</p>
 
-      <h3>7. Children’s Privacy</h3>
-      <p>Our game is not intended for children under 13. If we become aware of having collected data from a child without parental consent, we will delete it.</p>
+    <h3>8. Contact Us</h3>
+    <p>If you have any questions or requests regarding this policy, please contact us at:</p>
+    <p>Email: <a href="mailto:yuren.chen.ccc@gmail.com">yuren.chen.ccc@gmail.com</a></p>
 
-      <h3>8. Contact Us</h3>
-      <p>If you have any questions or requests regarding this policy, please contact us at:</p>
-      <p>Email: <a href="mailto:yuren.chen.ccc@gmail.com">yuren.chen.ccc@gmail.com</a></p>
-
-      <h3>9. Changes to This Policy</h3>
-      <p>We may update this policy periodically. Any changes will be posted on this page with a revised date.</p>
-    </div>
+    <h3>9. Changes to This Policy</h3>
+    <p>We may update this policy periodically. Any changes will be posted on this page with a revised date.</p>
   </div>
 
   <footer>
