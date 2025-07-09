@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lemon X App - Privacy Policy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    header {
+      background-color: #ffcf40;
+      padding: 20px;
+      text-align: center;
+      color: #2c3e50;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #ddd;
+    }
+    nav a {
+      padding: 14px 20px;
+      display: inline-block;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #eee;
+    }
+    .content {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    a {
+      color: #0077cc;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    .banner-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f2f2f2;
+      color: #777;
+      margin-top: 40px;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    window.onload = () => showSection('home');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Lemon X App</h1>
+    <p>Fun, Casual, and Creative Mobile Games</p>
+  </header>
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('privacy')">Privacy Policy</a>
+  </nav>
+
+  <div class="content">
+    <div id="home" class="section">
+      <h2>Welcome to Lemon X App</h2>
+      <img src="https://images.unsplash.com/photo-1581091012184-7b81a4894c8c" alt="Casual Gaming" class="banner-img">
+      <p>
+        At <strong>Lemon X App</strong>, we're dedicated to creating lighthearted and delightful casual mobile games. Whether you're taking a break or just looking to smile, our titles are designed to relax and entertain. Our team of passionate developers, designers, and artists work hard to make your free time more joyful.
+      </p>
+      <p>
+        Our games feature:
+        <ul>
+          <li>Simple but engaging gameplay</li>
+          <li>Charming visuals and relaxing music</li>
+          <li>Accessible mechanics for all ages</li>
+        </ul>
+      </p>
+      <p>
+        We believe gaming should be a positive and fun experience. Our flagship title <strong>Screw Jammed</strong> is just the beginning — stay tuned for more unique and joyful creations from us!
+      </p>
+    </div>
+
+    <div id="privacy" class="section">
+      <h2>Privacy Policy for Screw Jammed</h2>
+      <p><strong>Last updated:</strong> July 7, 2025</p>
+
+      <h3>1. Introduction</h3>
+      <p>We at Screw Jammed take your privacy seriously. This privacy policy explains what data we collect, why we collect it, and how we use and protect it.</p>
+
+      <h3>2. Information We Collect</h3>
+      <ul>
+        <li><strong>Device Information:</strong> Device model, operating system version, unique identifiers (such as IDFA or GAID).</li>
+        <li><strong>Location:</strong> Approximate location based on IP for regional services and ad targeting.</li>
+        <li><strong>Language Settings:</strong> To support localized experiences.</li>
+        <li><strong>Behavioral Data:</strong> In-game interactions, ad views, gameplay events.</li>
+      </ul>
+
+      <h3>3. Third-Party SDKs and Services</h3>
+      <p>We integrate with the following third-party services for advertising and analytics:</p>
+      <ul>
+        <li><strong>LevelPlay by IronSource:</strong> <a href="https://www.is.com/privacy-policy/" target="_blank">Privacy Policy</a></li>
+        <li><strong>Unity Ads:</strong> <a href="https://unity.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
+        <li><strong>Google AdMob:</strong> <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+        <li><strong>Firebase:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
+      </ul>
+
+      <h3>4. How We Use Your Information</h3>
+      <ul>
+        <li>To provide and improve gameplay features.</li>
+        <li>To serve relevant ads based on user behavior and location.</li>
+        <li>To analyze performance and diagnose issues.</li>
+        <li>To comply with applicable laws and regulations.</li>
+      </ul>
+
+      <h3>5. Data Storage & Security</h3>
+      <p>We take reasonable technical and organizational measures to protect your data. Data is retained only as long as necessary for the purposes outlined in this policy.</p>
+
+      <h3>6. Your Rights</h3>
+      <ul>
+        <li>Access, modify, or delete your personal data.</li>
+        <li>Opt out of personalized advertising.</li>
+        <li>Contact us with any privacy concerns.</li>
+      </ul>
+
+      <h3>7. Children’s Privacy</h3>
+      <p>Our game is not intended for children under 13. If we become aware of having collected data from a child without parental consent, we will delete it.</p>
+
+      <h3>8. Contact Us</h3>
+      <p>If you have any questions or requests regarding this policy, please contact us at:</p>
+      <p>Email: <a href="mailto:yuren.chen.ccc@gmail.com">yuren.chen.ccc@gmail.com</a></p>
+
+      <h3>9. Changes to This Policy</h3>
+      <p>We may update this policy periodically. Any changes will be posted on this page with a revised date.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Lemon X App. All rights reserved.
+  </footer>
+</body>
+</html>
